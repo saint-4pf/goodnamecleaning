@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Name Cleaning Services Ghana - Professional Cleaning Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: #1a472a;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 71, 42, 0.7), rgba(26, 71, 42, 0.7)),
+                url('https://plus.unsplash.com/premium_photo-1663047397245-2ddad26c5dd7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHByb2Zlc3Npb25hbCUyMGNsZWFuaW5nfGVufDB8fDB8fHww') center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #ffd700;
+            color: #1a472a;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 4rem 2rem;
+            background: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1a472a;
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: #1a472a;
+            margin-bottom: 1rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            color: #1a472a;
+            margin-bottom: 1rem;
+        }
+
+        .about-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Booking Section */
+        .booking {
+            padding: 4rem 2rem;
+            background: #f4f4f4;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1a472a;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: #1a472a;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #2a5f3a;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 4rem 2rem;
+            background: white;
+        }
+/* Testimonials Section */
+.testimonials {
+    padding: 4rem 2rem;
+    background: #f9f9f9;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '"';
+    font-size: 4rem;
+    color: #ffd700;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-family: Georgia, serif;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #1a472a;
+}
+
+.author-info h4 {
+    color: #1a472a;
+    margin-bottom: 0.2rem;
+}
+
+.author-info p {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.rating {
+    color: #ffd700;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 2rem;
+            background: #f4f4f4;
+            border-radius: 10px;
+        }
+
+        .contact-item h3 {
+            color: #1a472a;
+            margin-bottom: 1rem;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128C7E;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a472a;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: #4CAF50;
+            color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .error-message {
+            display: none;
+            background: #f44336;
+            color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #1a472a;
+                flex-direction: column;
+                padding: 1rem;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Good Name Cleaning Services </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#booking">Book Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Professional Cleaning Services in Ghana</h1>
+            <p>Making Your Space Sparkle, One Clean at a Time</p>
+            <a href="#booking" class="btn">Book Our Services</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1581578949510-fa7315c4c350?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fGhvbWUlMjBjbGVhbmluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="Home Cleaning">
+                    <h3>Home Cleaning</h3>
+                    <p>Comprehensive residential cleaning services to keep your home spotless and comfortable.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://plus.unsplash.com/premium_photo-1663047022624-2e573ccd0682?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8b2ZmaWNlJTIwY2xlYW5pbmd8ZW58MHx8MHx8fDA%3D" alt="Office Cleaning">
+                    <h3>Office Cleaning</h3>
+                    <p>Professional office cleaning to maintain a productive and hygienic work environment.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=600" alt="Deep Cleaning">
+                    <h3>Deep Cleaning</h3>
+                    <p>Thorough deep cleaning services for those hard-to-reach areas and stubborn stains.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://plus.unsplash.com/premium_photo-1677362887432-2c95e4437496?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2FycGV0JTIwY2xlYW5pbmclMjBzZXJ2aWNlfGVufDB8fDB8fHww" alt="Carpet Cleaning">
+                    <h3>Carpet & Upholstery</h3>
+                    <p>Expert carpet and upholstery cleaning using eco-friendly products and techniques.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://plus.unsplash.com/premium_photo-1676810459906-b269db9bd6e7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d2luZG93JTIwY2xlYW5pbmd8ZW58MHx8MHx8fDA%3D" alt="Window Cleaning">
+                    <h3>Window Cleaning</h3>
+                    <p>Crystal clear window cleaning services for residential and commercial properties.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1591638436404-4561853f9a33?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjN8fHBvc3QlMjBjb25zdHJ1Y3Rpb24lMjBjbGVhbmluZ3xlbnwwfHwwfHx8MA%3D%3D"
+                        alt="Post-Construction">
+                    <h3>Post-Construction</h3>
+                    <p>Specialized cleaning after construction or renovation projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Good Name Cleaning Services Ghana</h2>
+                    <p>We are Ghana's premier cleaning service provider, dedicated to delivering exceptional cleaning
+                        solutions to homes and businesses across the country. With years of experience and a team of
+                        trained professionals, we understand the unique cleaning needs of Ghanaian households and
+                        offices.</p>
+                    <p>Our commitment to using eco-friendly products and modern cleaning techniques ensures that your
+                        space is not only clean but also safe for your family and the environment. We take pride in our
+                        attention to detail and customer satisfaction.</p>
+                    <p>Trust Good Name Cleaning Services Ghana to transform your space into a pristine, healthy environment where you can live, work, and thrive.</p>
+                </div>
+                <img src="https://plus.unsplash.com/premium_photo-1683141112334-d7d404f6e716?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8amFuaXRvcmlhbCUyMHNlcnZpY2V8ZW58MHx8MHx8fDA%3D" alt="Cleaning Team"
+                    class="about-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking" id="booking">
+        <div class="container">
+            <h2 class="section-title">Book a Cleaning Service</h2>
+            <div id="bookingSuccess" class="success-message"></div>
+            <div id="bookingError" class="error-message"></div>
+            <form id="bookingForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="bookName">Full Name *</label>
+                        <input type="text" id="bookName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookPhone">Phone Number *</label>
+                        <input type="tel" id="bookPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookEmail">Email Address *</label>
+                        <input type="email" id="bookEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookService">Service Type *</label>
+                        <select id="bookService" required>
+                            <option value="">Select a service</option>
+                            <option value="Home Cleaning">Home Cleaning</option>
+                            <option value="Office Cleaning">Office Cleaning</option>
+                            <option value="Deep Cleaning">Deep Cleaning</option>
+                            <option value="Carpet & Upholstery">Carpet & Upholstery</option>
+                            <option value="Window Cleaning">Window Cleaning</option>
+                            <option value="Post-Construction">Post-Construction</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookDate">Preferred Date *</label>
+                        <input type="date" id="bookDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookTime">Preferred Time *</label>
+                        <input type="time" id="bookTime" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="bookAddress">Service Address *</label>
+                        <textarea id="bookAddress" required></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="bookNotes">Additional Notes</label>
+                        <textarea id="bookNotes"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Submit Booking Request</button>
+            </form>
+        </div>
+    </section>
+<!-- Testimonials Section -->
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="rating">★★★★★</div>
+                <p class="testimonial-text">Good Name Cleaning Services Ghana transformed my home! Their team is professional,
+                    punctual, and pays attention to every detail. I've been using their services for 6 months now and
+                    I'm always impressed. Highly recommend them to anyone in Accra!</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&q=80" alt="Ama Mensah"
+                        class="author-img">
+                    <div class="author-info">
+                        <h4>Mrs. Boatemaa Eunice</h4>
+                        <p>Homeowner, East Legon</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="rating">★★★★★</div>
+                <p class="testimonial-text">As a business owner, having a clean office is crucial. Good Name Cleaning Services Ghana
+                    handles our office cleaning every week and they're always reliable. Our workspace looks fantastic
+                    and our employees love coming to work now!</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="Kwame Osei"
+                        class="author-img">
+                    <div class="author-info">
+                        <h4>Mr.Osei M. Franklyn</h4>
+                        <p>CEO, Tech Company</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="rating">★★★★★</div>
+                <p class="testimonial-text">I needed a deep clean after my house renovation and Good Name Cleaning Services Ghana did
+                    an amazing job! They got rid of all the construction dust and left my house sparkling. Very
+                    affordable and excellent service. God bless you!</p>
+                <div class="testimonial-author">
+                    <img src="https://media.istockphoto.com/id/1415794813/photo/portrait-of-young-african-woman.webp?a=1&b=1&s=612x612&w=0&k=20&c=D2PERuR5a5kPpxYc9O0311ai0c_vhVGycGmkUg5x2Tk="
+                        alt="Abena Asante" class="author-img">
+                    <div class="author-info">
+                        <h4>Mrs. Asante Benedicta</h4>
+                        <p>Homeowner, Tema</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="rating">★★★★★</div>
+                <p class="testimonial-text">Best cleaning service in Ghana! They cleaned my carpets and sofas and they
+                    look brand new. The team is respectful, hardworking, and they use quality products. I will
+                    definitely be calling them again!</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1755705098259-172041d16a1a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDE0fHxhZnJpY2FuJTIwd29tYW4lMjBzbWlsaW5nfGVufDB8fDB8fHww"
+                        alt="Efua Boateng" class="author-img">
+                    <div class="author-info">
+                        <h4>Buabeng Jessica</h4>
+                        <p>Homeowner, McCarthy Hill</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="rating">★★★★★</div>
+                <p class="testimonial-text">Excellent service from start to finish! Their customer service is top-notch
+                    and the cleaning crew is very professional. They even helped me organize some things. Worth every
+                    pesewa! Thank you Good Name Cleaning Services!</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1616805765352-beedbad46b2a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWZyaWNhbiUyMGJ1c2luZXNzJTIwbWFufGVufDB8fDB8fHww" alt="Kofi Mensah"
+                        class="author-img">
+                    <div class="author-info">
+                        <h4>Dr.Kofi Mensah</h4>
+                        <p>Property Manager, Accra</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="rating">★★★★★</div>
+                <p class="testimonial-text">I was hesitant at first but Good Name Cleaning Services Ghana exceeded my expectations!
+                    They're honest, trustworthy, and do an incredible job. My house has never been cleaner. I recommend
+                    them to all my friends and family!</p>
+                <div class="testimonial-author">
+                    <img src="https://media.istockphoto.com/id/2225527940/photo/portrait-of-young-adult-black-woman-standing-confidently-in-front-of-chalkboard.webp?a=1&b=1&s=612x612&w=0&k=20&c=oD_5KvXfR9sg2TeaN8tMDIxU4h6qqoZwbDbTziwvev8=" alt="Akosua Darko"
+                        class="author-img">
+                    <div class="author-info">
+                        <h4>Mad.Darko Eugenia</h4>
+                        <p>Teacher, Spintex</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📍 Location</h3>
+                    <p>Accra, Ghana<br>East Legon Area</p>
+                </div>
+                <div class="contact-item">
+                    <h3>📞 Phone</h3>
+                    <p>+233 57 577 0122</p>
+                    <a href="https://wa.me/233575770122" class="whatsapp-btn" target="_blank">Chat on WhatsApp</a>
+                </div>
+                <div class="contact-item">
+                    <h3>📧 Email</h3>
+                    <p>goodnamecleaningservices312@gmail.com</p>
+                </div>
+            </div>
+
+            <h3 class="section-title" style="font-size: 2rem; margin-top: 2rem;">Send Us a Message</h3>
+            <div id="contactSuccess" class="success-message"></div>
+            <div id="contactError" class="error-message"></div>
+            <form id="contactForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="contactName">Your Name *</label>
+                        <input type="text" id="contactName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Your Email *</label>
+                        <input type="email" id="contactEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactPhone">Your Phone *</label>
+                        <input type="tel" id="contactPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactSubject">Subject *</label>
+                        <input type="text" id="contactSubject" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="contactMessage">Message *</label>
+                        <textarea id="contactMessage" required></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Good Name Cleaning Services Ghana. All rights reserved.</p>
+        <p>Professional Cleaning Services | Trusted by Ghanaians</p>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Close mobile menu after clicking
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
+
+        // Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            const phone = document.getElementById('contactPhone').value;
+            const subject = document.getElementById('contactSubject').value;
+            const message = document.getElementById('contactMessage').value;
+
+            // Email configuration - REPLACE WITH YOUR ACTUAL EMAIL
+            const companyEmail = 'goodnamecleaningservices312@gmail.com';
+            const mailtoLink = `mailto:${companyEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+                `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`
+            )}`;
+
+            // Open email client
+            window.location.href = mailtoLink;
+
+            // Show success message
+            const successMsg = document.getElementById('contactSuccess');
+            successMsg.textContent = 'Opening your email client... Please send the email to complete your message.';
+            successMsg.style.display = 'block';
+
+            // Reset form
+            this.reset();
+
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+            }, 5000);
+        });
+
+        // Booking Form Submission
+        document.getElementById('bookingForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('bookName').value;
+            const phone = document.getElementById('bookPhone').value;
+            const email = document.getElementById('bookEmail').value;
+            const service = document.getElementById('bookService').value;
+            const date = document.getElementById('bookDate').value;
+            const time = document.getElementById('bookTime').value;
+            const address = document.getElementById('bookAddress').value;
+            const notes = document.getElementById('bookNotes').value;
+
+            // Email configuration - REPLACE WITH YOUR ACTUAL EMAIL
+            const companyEmail = 'goodnamecleaningservices312@gmail.com';
+            const subject = `Booking Request - ${service}`;
+            const body = `
+NEW BOOKING REQUEST
+
+Customer Information:
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+
+Service Details:
+Service Type: ${service}
+Preferred Date: ${date}
+Preferred Time: ${time}
+
+Service Address:
+${address}
+
+Additional Notes:
+${notes}
+            `;
+
+            const mailtoLink = `mailto:${companyEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            // Open email client
+            window.location.href = mailtoLink;
+
+            // WhatsApp Option - REPLACE WITH YOUR ACTUAL WHATSAPP NUMBER (without + sign)
+            const whatsappNumber = '233575770122'; // Replace with actual number
+            const whatsappMessage = `Hi Good Name Cleaning Services Ghana! I would like to book a cleaning service.\n\nName: ${name}\nService: ${service}\nDate: ${date}\nTime: ${time}\nAddress: ${address}`;
+            const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+            // Show success message with WhatsApp option
+            const successMsg = document.getElementById('bookingSuccess');
+            successMsg.innerHTML = `
+                Booking request prepared! Your email client should open shortly.<br>
+                Or <a href="${whatsappLink}" target="_blank" style="color: white; text-decoration: underline;">click here to send via WhatsApp</a>
+            `;
+            successMsg.style.display = 'block';
+
+            // Reset form
+            this.reset();
+
+            // Hide message after 8 seconds
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+            }, 8000);
+        });
+
+        // Set minimum date for booking (today)
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('bookDate').setAttribute('min', today);
+    </script>
+</body>
+
+</html>
